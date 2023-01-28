@@ -1,3 +1,9 @@
+# Sammie Bever - Streaming Data - Module 04 Assignment - January 27, 2023
+Organization: Both versions (v1 and v2) do the same thing. Just the organization is different. Version 2 keeps from repeating itself by defining names of the queue, host, message, etc. Version 2 is the best practice for organization.
+
+V3 was written by me and reads from a csv file (as we did in module 2)
+
+
 # streaming-04-multiple-consumers
 
 > Use RabbitMQ to distribute tasks to multiple workers
