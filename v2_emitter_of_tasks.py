@@ -1,4 +1,13 @@
 """
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
+
+Used anaconda prompt to run this script. Used 3 terminals - 1 ran the producer script (this script) 
+and the other two terminals ran the consumer/worker script (v2_listening_worker.py). Had to change
+message manually each time in this file and save, then rerun script.
+
+See readme file for screenshot of running the v2 scripts.
+
+_____________________________
     This program sends a message to a queue on the RabbitMQ server.
     Make tasks harder/longer-running by adding dots at the end of the message.
 
@@ -63,6 +72,6 @@ if __name__ == "__main__":
     # if no arguments are provided, use the default message
     # use the join method to convert the list of arguments into a string
     # join by the space character inside the quotes
-    message = " ".join(sys.argv[1:]) or "Second task....."
+    message = " ".join(sys.argv[1:]) or "Sixth task............................................................"
     # send the message to the queue
     send_message("localhost","task_queue2",message)

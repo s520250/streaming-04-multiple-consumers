@@ -1,4 +1,6 @@
 """
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
+
     This program listens for work messages contiously. 
     Start multiple versions to add more workers.  
 

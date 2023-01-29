@@ -4,7 +4,7 @@ Organization: Both versions (v1 and v2) do the same thing. Just the organization
 V3 was written by me and reads from a csv file (as we did in module 2)
 
 
-# streaming-04-multiple-consumers
+## streaming-04-multiple-consumers
 
 > Use RabbitMQ to distribute tasks to multiple workers
 
@@ -39,11 +39,13 @@ Explore the RabbitMQ website.
 
 1. Run listening_worker.py
 
-Will it terminate on its own? How do you know? 
+Will it terminate on its own? How do you know? No, code says you need to use a keyboard interrupt to close
 
 ## Ready for Work
 
 1. Use your emitter_of_tasks to produce more task messages.
+
+Don't like that you have to manually change the message each time you run the file to get a new task.
 
 ## Start Another Listening Worker 
 
@@ -53,7 +55,7 @@ Follow the tutorial.
 Add multiple tasks (e.g. First message, Second message, etc.)
 How are tasks distributed? 
 Monitor the windows with at least two workers. 
-Which worker gets which tasks?
+Which worker gets which tasks? It alternates which worker gets the tasks
 
 
 ## Reference
@@ -64,3 +66,17 @@ Which worker gets which tasks?
 ## Screenshot
 
 See a running example with at least 3 concurrent process windows here:
+
+### Sammie Bever's Example (v1)
+GitHub Link - 
+![Bever v1 Example GitHub]()
+
+Using file name (PNG) -
+![Bever v1 Example PNG](Screenshot_Ran_v1.PNG)
+
+### Sammie Bever's Example (v2)
+GitHub Link - 
+![Bever v2 Example GitHub]()
+
+Using file name (PNG) -
+![Bever v2 Example PNG](Screenshot_Ran_v2.PNG)

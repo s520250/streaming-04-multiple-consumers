@@ -1,5 +1,13 @@
 """
-    This program listens for work messages contiously. 
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
+
+Used anaconda prompt to run this script. Used 3 terminals - 1 ran the producer script (v2_emitter_of_tasks.py) 
+and the other two terminals ran the consumer/worker script (this script)
+
+See readme file for screenshot of running the v2 scripts.
+
+_______________________________
+    This program listens for work messages continuously. 
     Start multiple versions to add more workers.  
 
     Author: Denise Case

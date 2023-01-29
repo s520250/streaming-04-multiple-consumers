@@ -1,5 +1,12 @@
 """
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
 
+Used anaconda prompt to run this script. Used 3 terminals - 1 ran the producer script (v1_emitter_of_tasks.py) 
+and the other two terminals ran the consumer/worker script (this script)
+
+See readme file for screenshot of running the v1 scripts.
+
+__________________________________
 Listens for task messages on the queue.
 This process runs continously. 
 

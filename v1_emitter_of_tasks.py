@@ -1,5 +1,12 @@
 """
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
 
+Used anaconda prompt to run this script. Used 3 terminals - 1 ran the producer script (this script) 
+and the other two terminals ran the consumer/worker script (v1_listening_worker.py). Had to change
+message manually each time in this file and save, then rerun script.
+
+See readme file for screenshot of running the v1 scripts.
+_________________
 Creates and sends a task message to the queue each execution.
 This process runs and finishes. 
 Make tasks harder/longer-running by adding dots at the end of the message.
@@ -8,6 +15,7 @@ Approach
 ---------
 Work Queues - one task producer / many workers sharing work.
 
+- Use the up arrow to get the last command executed.
 
 """
 
@@ -36,7 +44,7 @@ channel = connection.channel()
 # messages will not be deleted until the consumer acknowledges
 channel.queue_declare(queue="task_queue", durable=True)
 # create a message by joining the command line arguments
-message = " ".join(sys.argv[1:]) or "First task..."
+message = " ".join(sys.argv[1:]) or "Fourth task................."
 # publish the message to the queue
 channel.basic_publish(
     exchange="",

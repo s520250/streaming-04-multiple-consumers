@@ -1,4 +1,6 @@
 """
+Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
+
     This program sends a message to a queue from a csv file on the RabbitMQ server.
     Make tasks harder/longer-running by adding dots at the end of the message.
 
