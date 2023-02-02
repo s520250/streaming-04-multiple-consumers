@@ -2,6 +2,7 @@
 Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
 
     This program listens for work messages contiously. 
+    Each row is considered a task and should be received and acknowledged individually.
     Start multiple versions to add more workers.  
 
     Author: Sammie Bever
@@ -28,7 +29,8 @@ def callback(ch, method, properties, body):
 
 
 # define a main function to run the program
-def main(hn: str = "localhost", qn: str = "task_queue"):
+# need to update the task_queue for each version
+def main(hn: str = "localhost", qn: str = "task_queue3"):
     """ Continuously listen for task messages on a named queue."""
 
     # when a statement can go wrong, use a try-except block
@@ -98,4 +100,4 @@ def main(hn: str = "localhost", qn: str = "task_queue"):
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":
     # call the main function with the information needed
-    main("localhost", "task_queue2")
+    main("localhost", "task_queue3")
