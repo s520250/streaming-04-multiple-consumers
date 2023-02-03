@@ -5,6 +5,10 @@ Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
     Each row is considered a task and should be received and acknowledged individually.
     Start multiple versions to add more workers.  
 
+    See readme file for screenshot of running the v3 scripts.
+    Ran 3 Anaconda prompt terminals - 1 emitter of tasks (producer) and 2 listening workers (consumers).
+    Added option to show/not show the offer question to open RabbitMQ server.
+
     Author: Sammie Bever
     Date: January 27, 2023
 

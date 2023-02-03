@@ -5,6 +5,10 @@ Sammie Bever - January 27, 2023 - Streaming Data - Module 04 Assignment
     Each CSV row is considered a task.
     Make tasks harder/longer-running by adding dots at the end of the message.
 
+    See readme file for screenshot of running the v3 scripts.
+    Ran 3 Anaconda prompt terminals - 1 emitter of tasks (producer) and 2 listening workers (consumers).
+    Added option to show/not show the offer question to open RabbitMQ server.
+
     Author: Sammie Bever
     Date: January 27, 2023
 
@@ -20,13 +24,16 @@ import socket
 import time
 
 # define option to open RabbitMQ admin webpage
-def offer_rabbitmq_admin_site():
-    """Offer to open the RabbitMQ Admin website"""
-    ans = input("Would you like to monitor RabbitMQ queues? y or n ")
-    print()
-    if ans.lower() == "y":
-        webbrowser.open_new("http://localhost:15672/#/queues")
+def offer_rabbitmq_admin_site(show_offer):
+    # including show_offer variable to give the option to turn off the offer to open RabbitMQ
+    # Can tell it to be on or off later in the code
+    if show_offer == True:
+        """Offer to open the RabbitMQ Admin website"""
+        ans = input("Would you like to monitor RabbitMQ queues? y or n ")
         print()
+        if ans.lower() == "y":
+            webbrowser.open_new("http://localhost:15672/#/queues")
+            print()
 
 # define a message to send to queue
 def send_message(host: str, queue_name: str, message: str):
@@ -112,7 +119,9 @@ def send_message(host: str, queue_name: str, message: str):
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":  
     # ask the user if they'd like to open the RabbitMQ Admin site
-    offer_rabbitmq_admin_site()
+    # show_offer variable is set to False/off for RabbitMQ site
+    show_offer = False
+    offer_rabbitmq_admin_site(show_offer)
     # get the message from the command line
     # if no arguments are provided, use the default message
     # use the join method to convert the list of arguments into a string
